@@ -39,7 +39,7 @@ refs.btnStart.disabled = false;
 
 function checkDate() {
   if (choseDate > new Date) {
-    refs.btnStart.disabled(true);
+    refs.btnStart.disabled = false;
   } else {
     alert("Please choose a date in the future")
   }
@@ -47,7 +47,7 @@ function checkDate() {
 
 function startTimer() {
 
-  refs.btnStart.disabled(true);
+  refs.btnStart.disabled = true;
   refs.inputDate.disabled = true;
 
   timerId = setInterval(() => {

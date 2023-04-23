@@ -24,7 +24,7 @@ refs.form.addEventListener('submit', (e) => {
   let step = Number(refs.stepDalay.value);
   let amount = Number(refs.form.amount.value);
 
-  for (let index = 1; index < amount; index += 1, delay += step) {
+  for (let index = 1; index <= amount; index += 1, delay += step) {
     createPromise(index, delay)
       .then(({ position, delay }) =>
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`))
